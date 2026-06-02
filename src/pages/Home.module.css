@@ -1,0 +1,279 @@
+.hero {
+  padding: 80px 0 60px;
+  transition: background 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.heroText { flex: 1; max-width: 560px; }
+
+.heroPill {
+  display: inline-block;
+  border: 1.5px solid;
+  border-radius: 50px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.heroH1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.heroSub {
+  font-size: 17px;
+  color: var(--pm-ink-mid);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.heroCtas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.heroBtnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.heroBtnPrimary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+.heroBtnSecondary {
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: 2px solid var(--pm-border);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--pm-ink);
+  transition: border-color 0.2s;
+}
+
+.heroBtnSecondary:hover { border-color: var(--pm-ink); }
+
+.heroEmoji {
+  font-size: 100px;
+  line-height: 1;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
+  animation: fadeInUp 0.5s 0.1s ease both;
+  flex-shrink: 0;
+}
+
+.heroDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--pm-border);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, width 0.3s;
+}
+
+.dotActive { width: 24px; border-radius: 4px; }
+
+/* Trust bar */
+.trustBar {
+  background: var(--pm-ink);
+  color: white;
+  padding: 24px 0;
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.trustIcon { color: var(--pm-yellow); flex-shrink: 0; }
+
+.trustItem strong { display: block; font-size: 14px; font-weight: 700; }
+.trustItem span { font-size: 12px; color: #aaa; }
+
+/* Section */
+.section { padding: 64px 0; }
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--pm-ink);
+}
+
+.seeAll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--pm-red);
+  font-weight: 600;
+  font-size: 14px;
+  transition: gap 0.2s;
+}
+
+.seeAll:hover { gap: 10px; }
+
+/* Category grid */
+.catGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+}
+
+.catCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 12px;
+  border-radius: var(--pm-radius);
+  background: var(--pm-surface);
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.catCard:hover {
+  border-color: var(--cat-color, var(--pm-red));
+  transform: translateY(-4px);
+  box-shadow: var(--pm-shadow-md);
+}
+
+.catEmoji { font-size: 36px; }
+
+.catName { font-size: 11px; font-weight: 700; color: var(--pm-ink-mid); line-height: 1.3; }
+
+/* Product grid */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Banner */
+.bannerSection { padding: 0 0 64px; }
+
+.banner {
+  background: linear-gradient(135deg, #E8161A 0%, #B81215 100%);
+  border-radius: var(--pm-radius-lg);
+  padding: 48px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: white;
+}
+
+.bannerTitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.banner p { font-size: 15px; opacity: 0.9; max-width: 460px; line-height: 1.7; }
+
+.bannerBtn {
+  display: inline-block;
+  margin-top: 24px;
+  background: var(--pm-yellow);
+  color: var(--pm-ink);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.15s;
+}
+
+.bannerBtn:hover { transform: scale(1.04); }
+
+.bannerEmoji { font-size: 80px; flex-shrink: 0; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2)); }
+
+/* Testimonials */
+.testimonialGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.testimonial {
+  background: var(--pm-surface);
+  padding: 28px;
+  border-radius: var(--pm-radius-lg);
+  border: 1.5px solid var(--pm-border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.testimonialStars { display: flex; gap: 4px; }
+
+.testimonial p { font-size: 14px; color: var(--pm-ink-mid); line-height: 1.7; font-style: italic; }
+
+.testimonialAuthor { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+
+.testimonialAvatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--pm-red);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.testimonialAuthor strong { display: block; font-size: 14px; }
+.testimonialAuthor span { font-size: 12px; color: var(--pm-ink-muted); }
+
+@media (max-width: 1024px) {
+  .catGrid { grid-template-columns: repeat(4, 1fr); }
+  .productGrid { grid-template-columns: repeat(3, 1fr); }
+  .trustGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .heroInner { flex-direction: column; text-align: center; }
+  .heroCtas { justify-content: center; }
+  .heroEmoji { font-size: 70px; }
+  .catGrid { grid-template-columns: repeat(4, 1fr); }
+  .productGrid { grid-template-columns: repeat(2, 1fr); }
+  .testimonialGrid { grid-template-columns: 1fr; }
+  .banner { flex-direction: column; text-align: center; padding: 36px 28px; }
+  .bannerEmoji { font-size: 60px; }
+}
+
+@media (max-width: 480px) {
+  .catGrid { grid-template-columns: repeat(4, 1fr); }
+  .trustGrid { grid-template-columns: 1fr 1fr; }
+}
